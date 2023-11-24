@@ -18,13 +18,13 @@ struct TextBubbleView : View {
         Text("Welcome! \n \nStart watching any show (turn up the volume please), search for what you're watching here, and have fun!")
             .foregroundStyle(.black)
             .padding()
-            .background(Color.orange.gradient)
+            .background(Color.orange.gradient) // set background color as soft orange gradient
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
-            .background {
+            .background { // put triangle behind the rectangle
                 Image(systemName: "arrowtriangle.down.fill")
-                    .font(.title)
-                    .offset(x: 0, y: 75)
-                    .rotationEffect(.degrees(180))
+                    .font(.title) // this makes the triangle bigger
+                    .offset(x: 0, y: 75) // put triangle in center of screen, move it to top of rectangle
+                    .rotationEffect(.degrees(180)) // rotate triangle 180 degrees
                     .foregroundColor(Color(red: 255/255, green: 181/255, blue: 40/255))
             }
     }

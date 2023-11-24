@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/*
+ Placeholder Notifications view
+ */
+
 struct NotifsView: View {
     var body: some View {
         Text("Notification View")

@@ -13,19 +13,19 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        TabView {
-            ShowchatView()
+        TabView { // the nav bar itself, with all the buttons on the bottom
+            ShowchatView() // this button leads to Showchat view
                 .tabItem {
                     Image(systemName: "text.bubble")
                     Text("Showchat")
                     
                 }
-            ProfileView()
+            ProfileView() // this button leads to the faux profile view
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Profile")
                 }
-            NotifsView()
+            NotifsView() // this button leads to the faux notifications view
                 .tabItem {
                     Image(systemName: "bell.fill")
                     Text("Notifications")

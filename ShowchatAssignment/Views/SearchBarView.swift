@@ -19,18 +19,18 @@ struct SearchBarView : View {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(Color.secondary)
             TextField("Show & season you're watching", text: $searchText)
-                .textInputAutocapitalization(.never)
+                .textInputAutocapitalization(.never) // disable auto-capitalization of user input in text field
             Image(systemName: "xmark")
                 .foregroundColor(Color.secondary)
                 .onTapGesture {
-                    searchText = ""
+                    searchText = "" // clear text field when 'x' is tapped
                 }
         }
         .padding()
         .background(
             Rectangle()
-                .fill(Color(red: 0.2, green: 0.21, blue: 0.22))
-                .preferredColorScheme(.dark)
+                .fill(Color(red: 0.2, green: 0.21, blue: 0.22)) //  closest color I could get to match the spec
+                .preferredColorScheme(.dark) // force dark mode
             
         )
     }
