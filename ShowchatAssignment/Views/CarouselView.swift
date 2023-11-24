@@ -17,13 +17,13 @@ struct CarouselView : View {
     var imageNames : [String] // list of images to display in the carousel
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
+        ScrollView(.horizontal, showsIndicators: false) { // makes sure the scrolling is done horizontally
             LazyHStack(spacing: 15) { // add some spacing between the posters
                 ForEach(imageNames, id: \.self) {show in
                     VStack {
                         Image(show) // for each image name given, display corresponding poster
                             .resizable() // makes sure the poster can be resized to fit the frame
-                            .scaledToFill() // makes sure the image is scaled to fit the fram
+                            .scaledToFill() // makes sure the image is scaled to fit the frame
                             .frame(width: 204, height: 320)
                             .clipShape(RoundedRectangle(cornerRadius: 15.0)) // round the edges of the poster
                         HStack {
@@ -34,7 +34,7 @@ struct CarouselView : View {
                                         .frame(width: 44, height: 44)
                                 }
                             }
-                            .offset(x: 37, y: -30)
+                            .offset(x: 37, y: -30) // put the 'profile pics' above the posters
                         }
                     }
                 }
